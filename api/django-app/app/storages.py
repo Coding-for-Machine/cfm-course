@@ -23,7 +23,7 @@ class MediaStorage(S3Boto3Storage):
         if not name:
             return ''
         name = self._normalize_name(name)
-        return f"{settings.AWS_S3_ENDPOINT_URL}/{self.bucket_name}/{name}"
+        return f"{settings.AWS_S3_CUSTOM_DOMAIN}/{self.bucket_name}/{name}"
     
 
 class StaticStorage(S3Boto3Storage):
@@ -44,4 +44,4 @@ class StaticStorage(S3Boto3Storage):
         if not name:
             return ''
         name = self._normalize_name(name)
-        return f"{settings.AWS_S3_ENDPOINT_URL}/{self.bucket_name}/{name}"
+        return f"{settings.AWS_S3_CUSTOM_DOMAIN}/{self.bucket_name}/{name}"

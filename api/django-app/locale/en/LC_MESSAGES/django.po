@@ -1,0 +1,197 @@
+# English translation file (optional, usually default in Django)
+msgid ""
+msgstr ""
+"Project-Id-Version: MyProject 1.0\n"
+"Report-Msgid-Bugs-To: dev@mycompany.com\n"
+"POT-Creation-Date: 2024-04-25 15:30+0500\n"
+"PO-Revision-Date: 2024-04-25 15:35+0500\n"
+"Last-Translator: Your Name <your@email.com>\n"
+"Language-Team: English <en@mycompany.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "View site"
+msgstr "View site"
+
+msgid "Welcome"
+msgstr "Welcome"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Add"
+msgstr "Add"
+
+msgid "Change"
+msgstr "Change"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Yes"
+msgstr "Yes"
+
+msgid "No"
+msgstr "No"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Log in"
+msgstr "Log in"
+
+msgid "Log out"
+msgstr "Log out"
+
+msgid "Change password"
+msgstr "Change password"
+
+msgid "Django administration"
+msgstr "Django administration"
+
+msgid "Site administration"
+msgstr "Site administration"
+
+msgid "Recent actions"
+msgstr "Recent actions"
+
+msgid "My actions"
+msgstr "My actions"
+
+msgid "Add %(name)s"
+msgstr "Add %(name)s"
+
+msgid "Save and add another"
+msgstr "Save and add another"
+
+msgid "Save and continue editing"
+msgstr "Save and continue editing"
+
+msgid "Please correct the error below."
+msgstr "Please correct the error below."
+
+msgid "Please correct the errors below."
+msgstr "Please correct the errors below."
+
+msgid "Users"
+msgstr "Users"
+
+msgid "Groups"
+msgstr "Groups"
+
+msgid "Products"
+msgstr "Products"
+
+msgid "Categories"
+msgstr "Categories"
+
+msgid "Orders"
+msgstr "Orders"
+
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr "The %(name)s \"%(obj)s\" was added successfully."
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "The %(name)s \"%(obj)s\" was changed successfully."
+
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr "The %(name)s \"%(obj)s\" was deleted successfully."
+
+msgid "Today"
+msgstr "Today"
+
+msgid "Now"
+msgstr "Now"
+
+msgid "Show all"
+msgstr "Show all"
+
+msgid "first"
+msgstr "first"
+
+msgid "last"
+msgstr "last"
+
+msgid "Search Users..."
+msgstr "Search Users..."
+
+msgid "Search Products..."
+msgstr "Search Products..."
+
+msgid "Main navigation"
+msgstr "Main navigation"
+
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+msgid "Toggle side menu"
+msgstr "Toggle side menu"
+
+msgid "User"
+msgstr "User"
+
+msgid "Profile"
+msgstr "Profile"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Notifications"
+msgstr "Notifications"
+
+msgid "Messages"
+msgstr "Messages"
+
+msgid "Tasks"
+msgstr "Tasks"
+
+msgid "Activity"
+msgstr "Activity"
+
+msgid "Welcome back to"
+msgstr "Welcome back to"
+
+msgid "Coding-for-Machine| Admin"
+msgstr "Coding-for-Machine | Admin"
+
+msgid "Email manzil *"
+msgstr "Email address *"
+
+msgid "Parol *"
+msgstr "Password *"
+
+msgid "Return to site"
+msgstr "Return to site"
+
+msgid "User Daily Activity"
+msgstr "Ежедневная активность пользователя"
+
+msgid "You have been successfully logged out from the administration"
+msgstr "You have been successfully logged out from the administration"
+
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Thanks for spending some quality time with the web site today."
+
+msgid "Log in again"
+msgstr "Log in again"

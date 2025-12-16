@@ -1,0 +1,208 @@
+# Django admin paneli tarjima fayli
+# Copyright (C) 2024 MyCompany
+msgid ""
+msgstr ""
+"Project-Id-Version: MyProject 1.0\n"
+"Report-Msgid-Bugs-To: dev@mycompany.com\n"
+"POT-Creation-Date: 2024-04-25 15:30+0500\n"
+"PO-Revision-Date: 2024-04-25 15:35+0500\n"
+"Last-Translator: Ism Familiya <ism@mycompany.com>\n"
+"Language-Team: Oʻzbek <uz@mycompany.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
+
+# General
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "View site"
+msgstr "Saytni koʻrish"
+
+msgid "Welcome"
+msgstr "Xush kelibsiz"
+
+msgid "Save"
+msgstr "Saqlash"
+
+msgid "Delete"
+msgstr "Oʻchirish"
+
+msgid "Add"
+msgstr "Qoʻshish"
+
+msgid "Change"
+msgstr "Oʻzgartirish"
+
+msgid "Search"
+msgstr "Qidirish"
+
+msgid "Filter"
+msgstr "Filtr"
+
+msgid "Actions"
+msgstr "Amallar"
+
+msgid "Yes"
+msgstr "Ha"
+
+msgid "No"
+msgstr "Yoʻq"
+
+# Auth
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Log in"
+msgstr "Kirish"
+
+msgid "Log out"
+msgstr "Chiqish"
+
+msgid "Change password"
+msgstr "Parolni oʻzgartirish"
+
+# Admin
+msgid "Django administration"
+msgstr "Django maʼmuriyati"
+
+msgid "Site administration"
+msgstr "Sayt maʼmuriyati"
+
+msgid "Recent actions"
+msgstr "Soʻnggi amallar"
+
+msgid "My actions"
+msgstr "Mening amallarim"
+
+msgid "Add %(name)s"
+msgstr "%(name)s qoʻshish"
+
+msgid "Save and add another"
+msgstr "Saqlash va yangisini qoʻshish"
+
+msgid "Save and continue editing"
+msgstr "Saqlash va tahrirlashda davom etish"
+
+msgid "Please correct the error below."
+msgstr "Quyidagi xatoni tuzating."
+
+msgid "Please correct the errors below."
+msgstr "Quyidagi xatolarni tuzating."
+
+# Models
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+msgid "Groups"
+msgstr "Guruhlar"
+
+msgid "Products"
+msgstr "Mahsulotlar"
+
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+msgid "Orders"
+msgstr "Buyurtmalar"
+
+# Messages
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr "\"%(obj)s\" %(name)s muvaffaqiyatli qoʻshildi."
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "\"%(obj)s\" %(name)s muvaffaqiyatli oʻzgartirildi."
+
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr "\"%(obj)s\" %(name)s muvaffaqiyatli oʻchirildi."
+
+# Time
+msgid "Today"
+msgstr "Bugun"
+
+msgid "Now"
+msgstr "Hozir"
+
+# Pagination
+msgid "Show all"
+msgstr "Hammasini koʻrsatish"
+
+msgid "first"
+msgstr "birinchi"
+
+msgid "last"
+msgstr "oxirgi"
+
+# Search
+msgid "Search Users..."
+msgstr "Foydalanuvchilarni qidirish..."
+
+msgid "Search Products..."
+msgstr "Mahsulotlarni qidirish..."
+
+# Jazzmin (if used)
+msgid "Main navigation"
+msgstr "Asosiy menyu"
+
+msgid "Toggle navigation"
+msgstr "Menyuni koʻrsatish/yashirish"
+
+msgid "Toggle side menu"
+msgstr "Yon menyuni koʻrsatish/yashirish"
+
+msgid "User"
+msgstr "Foydalanuvchi"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Settings"
+msgstr "Sozlamalar"
+
+msgid "Notifications"
+msgstr "Bildirishnomalar"
+
+msgid "Messages"
+msgstr "Xabarlar"
+
+msgid "Tasks"
+msgstr "Vazifalar"
+
+msgid "Activity"
+msgstr "Faollik"
+
+msgid "Welcome back to"
+msgstr "Qaytganingiz bilan tabriklaymiz"
+
+msgid "LeetCode Uz | Admin"
+msgstr "LeetCode Uz | Admin paneli"
+
+msgid "Email manzil *"
+msgstr "Email manzil *"
+
+msgid "Parol *"
+msgstr "Parol *"
+
+msgid "Return to site"
+msgstr "Saytga qaytish"
+
+msgid "User Daily Activity"
+msgstr "Foydalanuvchining kundalik faoliyati"
+
+msgid "You have been successfully logged out from the administration"
+msgstr "Siz administratsiyadan muvaffaqiyatli chiqdingiz."
+
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Bugun veb-sayt bilan sifatli vaqt o'tkazganingiz uchun rahmat."
+
+msgid "Log in again"
+msgstr "Qayta kirish."

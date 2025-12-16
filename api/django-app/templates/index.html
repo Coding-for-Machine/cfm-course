@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Masalalar va Video</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+<div id="problems"></div>
+
+<script>
+fetch("/p/api/problems/")  // URL sizning backendga mos bo'lishi kerak
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('problems');
+
+    (data.problems || []).forEach(p => {
+      const div = document.createElement('div');
+      div.style.marginBottom = "30px";
+
+      const title = document.createElement('h3');
+      title.textContent = p.title || "No title";
+      div.appendChild(title);
+
+      const desc = document.createElement('p');
+      desc.textContent = "Points: " + (p.points || 0) + " | Difficulty: " + (p.difficulty || "Unknown");
+      div.appendChild(desc);
+
+      // Video mavjudligini tekshirish
+      if (p.video_available && p.hls_playlist) {
+        const video = document.createElement('video');
+        video.controls = true;
+        video.width = 640;
+
+        if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource(p.hls_playlist);
+          hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = p.hls_playlist;
+        } else {
+          const msg = document.createElement('p');
+          msg.textContent = "Video brauzeringizda o‘ynatilmaydi";
+          div.appendChild(msg);
+        }
+
+        div.appendChild(video);
+      } else {
+        const msg = document.createElement('p');
+        msg.textContent = "Video mavjud emas";
+        div.appendChild(msg);
+      }
+
+      // Hint va Challenge
+      (p.hints || []).forEach(h => {
+        if (!h) return;
+        const hints = div.querySelector('ul.hints') || (() => {
+          const ul = document.createElement('ul');
+          ul.className = 'hints';
+          const liTitle = document.createElement('li');
+          liTitle.textContent = 'Hints:';
+          ul.appendChild(liTitle);
+          div.appendChild(ul);
+          return ul;
+        })();
+        const li = document.createElement('li');
+        li.textContent = h.text || '';
+        hints.appendChild(li);
+      });
+
+      (p.challenges || []).forEach(c => {
+        if (!c) return;
+        const challenges = div.querySelector('ul.challenges') || (() => {
+          const ul = document.createElement('ul');
+          ul.className = 'challenges';
+          const liTitle = document.createElement('li');
+          liTitle.textContent = 'Challenges:';
+          ul.appendChild(liTitle);
+          div.appendChild(ul);
+          return ul;
+        })();
+        const li = document.createElement('li');
+        li.textContent = c.text || '';
+        challenges.appendChild(li);
+      });
+
+      container.appendChild(div);
+    });
+  })
+  .catch(err => {
+    console.error("Fetch xatosi:", err);
+  });
+</script>
+
+</body>
+</html>

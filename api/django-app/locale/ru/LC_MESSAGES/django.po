@@ -1,0 +1,205 @@
+# Административная панель Django - Русский перевод
+# Copyright (C) 2024 MyCompany
+msgid ""
+msgstr ""
+"Project-Id-Version: MyProject 1.0\n"
+"Report-Msgid-Bugs-To: dev@mycompany.com\n"
+"POT-Creation-Date: 2024-04-25 15:30+0500\n"
+"PO-Revision-Date: 2024-04-25 15:35+0500\n"
+"Last-Translator: Имя Фамилия <email@mycompany.com>\n"
+"Language-Team: Русский <ru@mycompany.com>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+# Общие термины
+msgid "Dashboard"
+msgstr "Панель управления"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "View site"
+msgstr "Посмотреть сайт"
+
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Change"
+msgstr "Изменить"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Filter"
+msgstr "Фильтр"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "No"
+msgstr "Нет"
+
+# Аутентификация
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Log in"
+msgstr "Войти"
+
+msgid "Log out"
+msgstr "Выйти"
+
+msgid "Change password"
+msgstr "Изменить пароль"
+
+# Админ-панель
+msgid "Django administration"
+msgstr "Администрирование Django"
+
+msgid "Site administration"
+msgstr "Администрирование сайта"
+
+msgid "Recent actions"
+msgstr "Последние действия"
+
+msgid "My actions"
+msgstr "Мои действия"
+
+msgid "Add %(name)s"
+msgstr "Добавить %(name)s"
+
+msgid "Save and add another"
+msgstr "Сохранить и добавить другой"
+
+msgid "Save and continue editing"
+msgstr "Сохранить и продолжить редактирование"
+
+msgid "Please correct the error below."
+msgstr "Исправьте ошибку ниже."
+
+msgid "Please correct the errors below."
+msgstr "Исправьте ошибки ниже."
+
+# Названия моделей
+msgid "Users"
+msgstr "Пользователи"
+
+msgid "Groups"
+msgstr "Группы"
+
+msgid "Products"
+msgstr "Продукты"
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "Orders"
+msgstr "Заказы"
+
+# Сообщения
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr "%(name)s \"%(obj)s\" был успешно добавлен."
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "%(name)s \"%(obj)s\" был успешно изменён."
+
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr "%(name)s \"%(obj)s\" был успешно удалён."
+
+# Даты/время
+msgid "Today"
+msgstr "Сегодня"
+
+msgid "Now"
+msgstr "Сейчас"
+
+# Пагинация
+msgid "Show all"
+msgstr "Показать все"
+
+msgid "first"
+msgstr "первая"
+
+msgid "last"
+msgstr "последняя"
+
+# Поиск
+msgid "Search Users..."
+msgstr "Поиск пользователей..."
+
+msgid "Search Products..."
+msgstr "Поиск продуктов..."
+
+# Jazzmin
+msgid "Main navigation"
+msgstr "Основное меню"
+
+msgid "Toggle navigation"
+msgstr "Переключить меню"
+
+msgid "Toggle side menu"
+msgstr "Переключить боковое меню"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Notifications"
+msgstr "Уведомления"
+
+msgid "Messages"
+msgstr "Сообщения"
+
+msgid "Tasks"
+msgstr "Задачи"
+
+msgid "Activity"
+msgstr "Активность"
+
+msgid "Welcome back to"
+msgstr "С возвращением в"
+
+msgid "LeetCode Uz | Admin"
+msgstr "LeetCode Uz | Админ панель"
+
+msgid "Email manzil *"
+msgstr "Адрес электронной почты *"
+
+msgid "Parol *"
+msgstr "Пароль *"
+
+msgid "User Daily Activity"
+msgstr "User Daily Activity"
+
+msgid "You have been successfully logged out from the administration"
+msgstr "Вы успешно вышли из системы администрирования."
+
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Спасибо за то, что уделили время нашему веб-сайту сегодня."
+
+msgid "Log in again"
+msgstr "Войти снова."

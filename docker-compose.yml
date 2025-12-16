@@ -1,0 +1,99 @@
+version: '3.9'
+
+services:
+  db_master:
+    image: postgres:17-alpine
+    container_name: cfm-db
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - db_master_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: cfm-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  minio:
+    build: ./s3
+    container_name: cfm-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: ./api/django-app
+    container_name: cfm-web
+    command: ./entrypoint.sh gunicorn app.wsgi:application --bind 0.0.0.0:8000
+    env_file:
+      - .env
+    volumes:
+      - ./api/django-app:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    depends_on:
+      db_master:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    restart: on-failure
+
+  celery_worker:
+    build: ./api/django-app
+    container_name: cfm-celery-worker
+    command: celery -A app worker --loglevel=info
+    env_file:
+      - .env
+    volumes:
+      - ./api/django-app:/app
+    depends_on:
+      - web
+    restart: on-failure
+
+  celery_beat:
+    build: ./api/django-app
+    container_name: cfm-celery-beat
+    command: celery -A app beat --loglevel=info
+    env_file:
+      - .env
+    volumes:
+      - ./api/django-app:/app
+    depends_on:
+      - web
+    restart: on-failure
+
+volumes:
+  db_master_data:
+  redis_data:
+  minio_data:
+  static_volume:
+  media_volume:  # oxirgi

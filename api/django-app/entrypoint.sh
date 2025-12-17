@@ -1,12 +1,6 @@
 #!/bin/sh
 set -e
 
-echo "⏳ Waiting for PostgreSQL..."
-until nc -z db_master 5432; do
-  echo "   PostgreSQL is unavailable - sleeping"
-  sleep 1
-done
-echo "✅ PostgreSQL is up!"
 
 echo "⏳ Waiting for Redis..."
 until nc -z redis 6379; do
@@ -16,7 +10,7 @@ done
 echo "✅ Redis is up!"
 
 echo "⏳ Waiting for MinIO..."
-until nc -z minio 9000; do
+until nc -z 161.97.104.181 80; do
   echo "   MinIO is unavailable - sleeping"
   sleep 1
 done

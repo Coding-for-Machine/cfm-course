@@ -1,22 +1,22 @@
 version: '3.9'
 
 services:
-  db_master:
-    image: postgres:17-alpine
-    container_name: cfm-db
-    environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    ports:
-      - "5433:5432"
-    volumes:
-      - db_master_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
+  # db_master:
+  #   image: postgres:17-alpine
+  #   container_name: cfm-db
+  #   environment:
+  #     POSTGRES_DB: ${DB_NAME}
+  #     POSTGRES_USER: ${DB_USER}
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD}
+  #   ports:
+  #     - "5433:5432"
+  #   volumes:
+  #     - db_master_data:/var/lib/postgresql/data
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+  #     interval: 5s
+  #     timeout: 5s
+  #     retries: 10
 
   redis:
     image: redis:7-alpine
@@ -31,19 +31,6 @@ services:
       timeout: 3s
       retries: 5
 
-  minio:
-    build: ./s3
-    container_name: cfm-minio
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    volumes:
-      - minio_data:/data
-    environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin123
-
-
   web:
     build: ./api/django-app
     container_name: cfm-web
@@ -57,11 +44,7 @@ services:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
     depends_on:
-      db_master:
-        condition: service_healthy
       redis:
-        condition: service_healthy
-      minio:
         condition: service_healthy
     restart: on-failure
 
@@ -92,6 +75,5 @@ services:
 volumes:
   db_master_data:
   redis_data:
-  minio_data:
   static_volume:
   media_volume:  # oxirgi

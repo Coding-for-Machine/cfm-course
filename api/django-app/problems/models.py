@@ -177,7 +177,7 @@ class ExecutionTestCase(TimeMixsin):
     problem = models.ForeignKey(Problem, related_name="execution_problem", on_delete=models.CASCADE)
     language = models.ForeignKey(Language, related_name="execution_language", on_delete=models.CASCADE)
     top_code = models.TextField(null=True, blank=True)
-    bootom_code = models.TextField()
+    bottom_code = models.TextField()
 
     class Meta:
         unique_together = ("problem", "language")
